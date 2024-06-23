@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .fz-16 {
+            font-size: 16px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+            margin: 10px 0;
+        }
+
+        th,
+        td {
+            padding: 8px;
+        }
+
+        .detail th,
+        .detail td {
+            border: 1px solid #000;
+        }
+
+        td.border-none {
+            border: none
+        }
+
+        .detail th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div style="padding: 20px;">
+            <img width="100px" src="https://webcaycanh.com/wp-content/themes/cay/imgs/logo.png" alt="" />
+        </div>
+        <div>
+            <p class="fz-16">
+                <span>Đơn vị: </span>
+                <span style="font-weight: bold;">Webcaycanh.com</span>
+            </p>
+            <p class="fz-16">
+                <span>Địa chỉ: </span>
+                <span>Man Thiện, Tp. Thủ Đức, Tp. Hồ Chí Minh</span>
+            </p>
+            <p class="fz-16">
+                <span>Hotline: </span>
+                <span>0988948824</span>
+            </p>
+        </div>
+    </header>
+
+    <section style="margin-top: 20px;">
+        <h1 style="text-align: center;">HÓA ĐƠN BÁN HÀNG</h1>
+
+        <table cellspacing="0" cellpadding="0">
+            <tr>
+                <td>
+                    <span style="font-weight: bold;">Khách hàng: </span>
+                    <span>
+                        <%= dataInvoice?.Customer %>
+                    </span>
+                </td>
+                <td>
+                    <span style="font-weight: bold;">Số điện thoại: </span>
+                    <span>
+                        <%= dataInvoice?.PhoneNumber %>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span style="font-weight: bold;">Thời gian đặt hàng: </span>
+                    <span>
+                        <%= dataInvoice?.OrderTime %>
+                    </span>
+                </td>
+                <td>
+                    <span style="font-weight: bold;">Hình thức thanh toán: </span>
+                    <span>
+                        <%= dataInvoice?.Method %>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span style="font-weight: bold;">Địa chỉ: </span>
+                    <span>
+                        <%= dataInvoice?.Address %>
+                    </span>
+                </td>
+            </tr>
+        </table>
+        <h3>Thông tin chi tiết</h3>
+        <table class="detail">
+            <thead>
+                <tr>
+                    <th align="center">STT</th>
+                    <th align="center">Mã sản phẩm</th>
+                    <th align="center">Tên sản phẩm</th>
+                    <th align="center">Số lượng</th>
+                    <th align="center">Đơn giá</th>
+                    <th align="center">Thành tiền</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% dataInvoice.ListProducts.forEach((val, index)=> { %>
+                    <tr>
+                        <td align="center">
+                            <%= index + 1 %>
+                        </td>
+                        <td align="center">
+                            <%= val?.plant_id %>
+                        </td>
+                        <td>
+                            <%= val?.plant_name %>
+                        </td>
+                        <td align="center">
+                            <%= val?.quantity %>
+                        </td>
+                        <td align="end">
+                            <%= formattedAmount(val?.unit_price) %>
+                        </td>
+                        <td align="end">
+                            <%= formattedAmount(val?.total_detail) %>
+                        </td>
+                    </tr>
+                    <% }); %>
+                        <tr>
+                            <td class="border-none">
+                                <span style="font-weight: bold;">Tổng cộng: </span>
+                            </td>
+                            <td class="border-none"></td>
+                            <td class="border-none"></td>
+                            <td class="border-none"></td>
+                            <td class="border-none"></td>
+                            <td class="border-none" align="end">
+                                <span style="font-weight: bold;">
+                                    <%= formattedAmount(dataInvoice?.Total) %>
+                                </span>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <div style="margin-top: 20px">
+            <span style="font-weight: bold;">Ghi chú cho đơn hàng: </span>
+            <span>
+                <%= dataInvoice?.Note %>
+            </span>
+        </div>
+
+    </section>
+</body>
+
+</html>

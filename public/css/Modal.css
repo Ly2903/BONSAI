@@ -1,0 +1,97 @@
+.modal {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3000;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.66);
+}
+.modal .modal-content {
+  background-color: #fff;
+  border-radius: 4px;
+  max-width: 80%;
+  width: 800px;
+  position: relative;
+}
+.modal .modal-content .close-modal {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 24px;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  transition: all 0.3s ease-in;
+}
+.modal .modal-content .close-modal:hover {
+  background-color: #b9b0b0;
+}
+.modal .modal-content .modal-image {
+  display: inline-block;
+  position: relative;
+}
+.modal .modal-content .modal-imageimg:first-child {
+  width: 400px;
+  height: 400px;
+  border-radius: 4px 4px 0 0;
+}
+.modal .modal-content .modal-desc {
+  border-radius: 0 0 4px 4px;
+  padding: 24px;
+  padding-top: 0;
+  font-size: 16px;
+}
+.modal .modal-content .modal-desc .modal-price {
+  color: #077915;
+}
+.modal .modal-content .count button {
+  border-radius: 50%;
+  border: 1px solid #b9b0b0;
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 30px;
+}
+.modal .modal-content .count button i {
+  color: #000;
+}
+.modal .modal-content .count button:hover {
+  border: 1px solid #077915;
+}
+.modal .modal-content .count button:hover i {
+  color: #077915;
+}
+.modal .modal-content .count input {
+  width: 44px;
+  padding: 2px 0;
+  margin: 0 10px;
+  border: 1px solid #b9b0b0;
+  text-align: center;
+}
+.modal .modal-content .count input::-webkit-outer-spin-button,
+.modal .modal-content .count input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.modal .modal-content .addToCart {
+  margin: 16px 0;
+}
+.modal .modal-content .addToCart .btn-addToCart {
+  box-sizing: border-box;
+  background-color: #077915;
+  color: #fff;
+  height: 40px;
+  font-size: 17px;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+.modal .modal-content .addToCart .btn-addToCart:hover {
+  background-color: #0aa91d;
+}/*# sourceMappingURL=Modal.css.map */

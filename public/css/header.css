@@ -1,0 +1,89 @@
+@keyframes anmActiveBag {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) rotate(0);
+  }
+  20% {
+    opacity: 1;
+    transform: scale(1.2) rotate(10);
+  }
+  40% {
+    transform: rotate(-10deg);
+  }
+  60% {
+    transform: rotate(10deg);
+  }
+  80% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  background-color: #fff;
+}
+header .container .input-group {
+  display: flex;
+  height: 36px;
+}
+header .container .input-group input {
+  display: inline-block;
+  border: 1px solid #077915;
+  color: #666;
+  font-size: 16px;
+  padding: 0 16px;
+}
+header .container .input-group .btn-search {
+  background-color: #077915;
+  padding: 0 20px;
+  cursor: pointer;
+}
+header .container .input-group .btn-search i {
+  color: #fff;
+  font-size: 15px;
+}
+header .container .header-right .cart-inf {
+  margin-right: 20px;
+  text-align: end;
+}
+header .container .header-right .cart-inf li {
+  color: #077915;
+  font-size: 14px;
+  margin-bottom: 3px;
+}
+header .container .header-right .cart-inf li span {
+  font-weight: bold;
+}
+header .container .header-right .bag {
+  position: relative;
+}
+header .container .header-right .bag .active-img-bag {
+  animation: anmActiveBag 0.05s infinite alternate linear;
+}
+
+@keyframes anmActiveBag {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) rotate(0);
+  }
+  20% {
+    opacity: 1;
+    transform: scale(1.2) rotate(10);
+  }
+  40% {
+    transform: rotate(-10deg);
+  }
+  60% {
+    transform: rotate(10deg);
+  }
+  80% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}/*# sourceMappingURL=header.css.map */

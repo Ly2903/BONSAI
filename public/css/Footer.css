@@ -1,0 +1,15 @@
+footer {
+  background-color: #ddd;
+  text-align: center;
+  padding: 32px 0;
+  color: #666;
+}
+footer .information {
+  opacity: 0.7;
+  margin-top: 24px;
+  font-size: 15px;
+}
+footer .information span {
+  color: rgb(33, 33, 33);
+  font-weight: bold;
+}/*# sourceMappingURL=Footer.css.map */

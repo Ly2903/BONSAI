@@ -1,0 +1,18 @@
+.noResult {
+  text-align: center;
+}
+.noResult .img-bare-tree {
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+.noResult .img-bare-tree img {
+  opacity: 0.4;
+  width: 320px;
+}
+.noResult h2 {
+  color: #666;
+}
+.noResult h4 {
+  opacity: 0.3;
+  padding: 16px 0;
+}/*# sourceMappingURL=EmptyProduct.css.map */

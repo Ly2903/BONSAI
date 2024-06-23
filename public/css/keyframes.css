@@ -1,0 +1,22 @@
+@keyframes anmActiveBag {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) rotate(0);
+  }
+  20% {
+    opacity: 1;
+    transform: scale(1.2) rotate(10);
+  }
+  40% {
+    transform: rotate(-10deg);
+  }
+  60% {
+    transform: rotate(10deg);
+  }
+  80% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}/*# sourceMappingURL=keyframes.css.map */
